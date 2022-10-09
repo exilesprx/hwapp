@@ -4,9 +4,7 @@ WORKDIR /go/src
 
 COPY ./ /go/src/
 
-RUN go get -d
-
-RUN go build -o ./build/
+RUN go get -d && go build -o ./build/
 
 
 FROM golang:1.18.3 as app
