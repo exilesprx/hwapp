@@ -1,7 +1,12 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"go-hwapp/messages"
+)
 
 func main() {
-	fmt.Println("First test")
+	welcome := messages.Welcome{Message: "Welcome"}
+
+	fmt.Println(welcome.Message)
 }
